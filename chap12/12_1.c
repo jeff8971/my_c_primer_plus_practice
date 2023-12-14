@@ -16,7 +16,7 @@ int main(void){
 
 void critics(int *u){
 	printf("No luck, my friend. Try again.\n");
-	scanf("%d", u);
+	scanf("%d", u); // mention that u is already a pointer. No & before u.
 }
 
 
