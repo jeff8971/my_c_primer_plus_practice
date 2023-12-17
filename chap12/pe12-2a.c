@@ -20,8 +20,6 @@ void set_mode(int m){
 		printf("Invalid mode specified. Mode %d(%s) used.\n", mode, mode == 0 ? "metric" : "US");
 		mode = 0;
 	}
-
-
 }
 
 // get_info() prompts the user to enter distance traveled and fuel consumed.
