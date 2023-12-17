@@ -8,6 +8,7 @@ static int mode;
 static double distance;
 static double fuel;
 
+// set_mode() prompts the user to enter 0 for metric mode, 1 for US mode.
 void set_mode(int m){
 	if (m == 0){
 		mode = 0;
