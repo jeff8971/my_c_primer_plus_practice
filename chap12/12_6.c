@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "r_and_c.h"
+#include "random.h"
 
 
 #define MAX 10
@@ -44,7 +44,7 @@ int main(void){
   printf("8: %d\n", eights);
   printf("9: %d\n", nines);
   printf("10: %d\n", tens);
-
+  printf("Total: %d\n", ones + twos + threes + fours + fives + sixes + sevens + eights + nines + tens);
   return 0;
   
 }
