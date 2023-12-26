@@ -27,8 +27,8 @@ int main(int argc, char *argv[]){
     exit(EXIT_FAILURE);
   }
 
-
-  while(byte = getc(origin) != EOF){
+  // 
+  while((byte = getc(origin)) != EOF){
     putc(byte, copy);
   }
 
