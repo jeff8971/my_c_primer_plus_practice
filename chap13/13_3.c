@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 
 int main(int argc, char *argv[]){
 
-  int byte;
+  char ch;
   FILE * origin;
   FILE * copy;
 
@@ -14,19 +15,22 @@ int main(int argc, char *argv[]){
     exit(EXIT_FAILURE);
   }
 
-  if((origin = fopen(argv[1], "rb")) == NULL){
+  if((origin = fopen(argv[1], "r")) == NULL){
     printf("The original file did not exist.\n");
     exit(EXIT_FAILURE);
   }
 
-  if((copy = fopen(argv[2], "wb")) == NULL){
+  if((copy = fopen(argv[2], "w")) == NULL){
     printf("The copy file can not be created.\n");
     exit(EXIT_FAILURE);
   }
 
   // 
-  while((byte = getc(origin)) != EOF){
-    putc(byte, copy);
+  while((ch = getc(origin)) != EOF){
+    if (islower(ch)){
+      ch = toupper(ch);
+    }
+    putc(ch, copy);
   }
 
   if (fclose(origin) != 0){
