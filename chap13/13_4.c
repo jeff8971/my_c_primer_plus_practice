@@ -20,17 +20,18 @@ int main(int argc, char* argv[]){
 
 
   for (filect = 1; filect < argc; filect++){
-    if ((source = fopen(argv[filect], "r") == NULL)){
+    if ((source = fopen(argv[filect], "r")) == NULL){
       printf("Could not open the file.\n");
       exit(EXIT_FAILURE);
     }
     while((byte = getc(source)) != EOF){
       putchar(byte);
-
     }
-
+    printf("\n");
+    printf("\n");
   }
 
+  return 0;
 
 
 }
